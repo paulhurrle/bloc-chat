@@ -1,6 +1,19 @@
-<h1>Home Page</h1>
-    <section>
-        <div ng-repeat="room in home.room.all">
-            <div>{{ room.$value }}</div>
-        </div>
-    </section>
+<section>
+
+    <div class="title">
+        <h1>Bloc Chat</h1>
+    </div>
+
+    <div class="modal-window">
+        <modal></modal>
+    </div>
+
+    <div class="new-room-button">
+        <button type="button" ng-click="home.open()">New room</button>
+    </div>
+
+    <ul ng-repeat="room in home.room.all">
+        {{ room.$value }}
+    </ul>
+
+</section>
