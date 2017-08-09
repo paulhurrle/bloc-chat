@@ -31,7 +31,7 @@
       * @param {Object} room
       */
       Room.add = function(room) {
-         rooms.$add({ room });
+         rooms.$add(room);
      };
 
       return Room;

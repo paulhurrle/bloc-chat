@@ -8,7 +8,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl',
+                controller: 'ModalCtrl as modal',
                 backdrop: 'static'
             });
         };
