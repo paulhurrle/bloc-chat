@@ -4,12 +4,11 @@
         this.input = '';
 
         this.cancel = function () {
-            $uibModalInstance.dismiss("Cancel");
+            $uibModalInstance.dismiss('cancel');
         };
 
         this.submit = function () {
             Room.add(this.input);
-            Room.$save(this.input);
             $uibModalInstance.close(this.input);
         };
     }

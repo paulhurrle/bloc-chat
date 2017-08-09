@@ -7,8 +7,9 @@
                                     //to bind to the view, but why `size`?
             $uibModal.open({
                 animation: true,
-                templateUrl: 'modal.html',
-                controller: 'ModalCtrl'
+                templateUrl: '/templates/modal.html',
+                controller: 'ModalCtrl',
+                backdrop: 'static'
             });
         };
     }

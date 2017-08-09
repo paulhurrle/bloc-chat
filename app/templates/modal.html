@@ -1,11 +1,11 @@
-<div class="modal-header" ng-controller="ModalCtrl as modal">
+<div class="modal-header">
     <h3 class="modal-title">Create new room</h3>
 </div>
 
 <div class="modal-body">
     <form ng-submit="modal.submit()">
         <div class="input-group">
-            <input type="text" placeholder="Enter room name" autofocus ng-model="input" />
+            <input type="text" placeholder="Enter room name" autofocus ng-model="modal.input">
             <span class="input-button">
                 <button class="button-nope" type="button" ng-click="modal.cancel()">Cancel</button>
                 <button class="button-yep" type="button" ng-click="modal.submit()">Create Room</button>

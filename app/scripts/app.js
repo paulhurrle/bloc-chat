@@ -12,6 +12,14 @@
                  controller: 'HomeCtrl as home',
                  templateUrl: '/templates/home.html'
              });
+
+         $stateProvider
+             .state('modal', {
+                 url: '/',
+                 controller: 'ModalCtrl as modal',
+                 templateUrl: '/templates/modal.html'
+             });
+
      }
 
      angular
