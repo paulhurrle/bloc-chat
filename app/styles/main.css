@@ -1,0 +1,64 @@
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    min-height: 100%;
+}
+
+.rooms-pane {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 300px;
+    background-color: rgba(150, 150, 150, 0.5);
+    padding: 10px 10px 10px 20px;
+}
+
+.messages-pane {
+    position: fixed;
+    bottom: 0;
+    left: 330px;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px 10px 10px 10px;
+    float:left;
+}
+
+.main-title {
+    width: 150px;
+    float: left;
+}
+
+.active-room-title {
+
+}
+
+.new-room-button {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 70px;
+    background-color: white;
+    padding: 5px;
+    float: left;
+}
+
+.room-list {
+    list-style: none;
+    color: gray;
+    clear: both;
+}
+
+.modal-window {
+    background-color: darkgray;
+    width: 200px;
+    margin-left: 20%;
+    margin-top: 20%;
+    padding: 10px;
+    border: 1px solid black;
+}

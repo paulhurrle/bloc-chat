@@ -1,19 +1,22 @@
-<section>
-
-    <div class="title">
+<section class="rooms-pane">
+    <div class="main-title">
         <h1>Bloc Chat</h1>
     </div>
-
-    <div class="modal-window">
-        <modal></modal>
-    </div>
-
     <div class="new-room-button">
-        <button type="button" ng-click="home.open()">New room</button>
+        <button class="button-text" type="button" ng-click="home.open()">New room</button>
     </div>
-
-    <ul ng-repeat="room in home.room.all">
-        {{ room.$value }}
+    <ul class="room-list" ng-repeat="room in home.rooms" ng-click="home.alert()">
+        <li>{{ room.$value }}</li>
     </ul>
+</section>
 
+<modal></modal>
+
+<section class="messages-pane">
+    <div class="title">
+        <h3>Current Room {{ home.activeRoom }}</h3>
+    </div>
+    <ul class="messages-list" ng-repeat="message in home.messages">
+        {{ message.$value }}
+    </ul>
 </section>
