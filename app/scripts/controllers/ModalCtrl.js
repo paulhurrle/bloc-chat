@@ -4,7 +4,7 @@
         this.input = '';
 
         this.cancel = function () {
-            $uibModalInstance.dismiss('cancel');
+            $uibModalInstance.close(false);
         };
 
         this.submit = function () {

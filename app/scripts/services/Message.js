@@ -8,7 +8,7 @@
       var Message = {};
 
       /**
-      * @desc Private variable stores a reference to Firebase database path to "messages"
+      * @desc Private variable stores a reference to Firebase database path to "messages" ordered by "roomId" property
       * @type relative reference
       */
       var ref = firebase.database().ref().child("messages");
@@ -20,20 +20,35 @@
       var messages = $firebaseArray(ref);
 
       /**
-      * @desc Public variable stores data from "messages" array
+      * @desc Public variable stores data from Message.getByRoomId function
       * @type {array}
       */
-      Message.all = messages;
+      Message.messagesByRoomId = '';
+
+      /**
+      *@function Message.getByRoomId
+      *@desc Public method gets messages from firebase database that have a given roomID property
+      *@param {Object} roomId
+      */
+      Message.getByRoomId = function(roomId) {
+          Message.messagesByRoomId = messages.orderByChild("roomId").equalTo(roomId);
+      };
 
       /**
       * @function Message.add
       * @desc Public method that adds a message to Message objects
       * @param {Object} message
       */
+/*
       Message.add = function(message) {
-         messages.$add(message);
-     };
-
+         messages.$add({
+             username: "<USERNAME HERE>",
+             content: "<CONTENT OF THE MESSAGE HERE>",
+             sentAt: "<TIME MESSAGE WAS SENT HERE>",
+             roomId: "<ROOM UID HERE>"
+         });
+      };
+*/
       return Message;
   }
 

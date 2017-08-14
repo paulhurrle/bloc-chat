@@ -3,12 +3,10 @@
 
         this.rooms = Room.all;
 
-        this.messages = Message.all;
+        this.activeRoom = '';
 
-        this.activeRoom = Room.active;
-
-        this.alert = function () {
-            alert("The active room is now " + this.activeRoom);
+        this.setActiveRoom = function (room) {
+            this.activeRoom = room.$value;
         };
 
         this.open = function () {   //in your JSFiddle, you pass `size` and `template` as arguments here.
@@ -21,6 +19,8 @@
                 backdrop: 'static'
             });
         };
+
+        this.messages = Message.messagesByRoomId;
     }
 
     angular

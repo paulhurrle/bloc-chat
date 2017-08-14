@@ -5,7 +5,7 @@
     <div class="new-room-button">
         <button class="button-text" type="button" ng-click="home.open()">New room</button>
     </div>
-    <ul class="room-list" ng-repeat="room in home.rooms" ng-click="home.alert()">
+    <ul class="room-list" ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)">
         <li>{{ room.$value }}</li>
     </ul>
 </section>
@@ -14,9 +14,11 @@
 
 <section class="messages-pane">
     <div class="title">
-        <h3>Current Room {{ home.activeRoom }}</h3>
+        <h3>{{ home.activeRoom }}</h3>
     </div>
     <ul class="messages-list" ng-repeat="message in home.messages">
-        {{ message.$value }}
+        {{ message.content }}
+        {{ message.username }}
+        {{ message.sentAt }}
     </ul>
 </section>

@@ -14,7 +14,7 @@ body {
     bottom: 0;
     left: 0;
     top: 0;
-    width: 300px;
+    width: 350px;
     background-color: rgba(150, 150, 150, 0.5);
     padding: 10px 10px 10px 20px;
 }
@@ -22,7 +22,7 @@ body {
 .messages-pane {
     position: fixed;
     bottom: 0;
-    left: 330px;
+    left: 350px;
     top: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -31,7 +31,7 @@ body {
 }
 
 .main-title {
-    width: 150px;
+    width: 200px;
     float: left;
 }
 
@@ -40,10 +40,8 @@ body {
 }
 
 .new-room-button {
-    margin-left: 10px;
     margin-top: 20px;
-    width: 70px;
-    background-color: white;
+    width: 100px;
     padding: 5px;
     float: left;
 }
@@ -54,11 +52,31 @@ body {
     clear: both;
 }
 
-.modal-window {
-    background-color: darkgray;
-    width: 200px;
-    margin-left: 20%;
-    margin-top: 20%;
-    padding: 10px;
-    border: 1px solid black;
+.input-button {
+    margin-top: 15px;
+}
+
+.modal-content {
+    width: 250px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 15px;
+    background: darkgrey;
+}
+
+.modal-header {
+    font-weight: 900;
+    background: lightgrey;
+}
+
+.button-nope {
+    background: darkgray;
+    color: black;
+}
+
+.button-yep {
+    background: dimgray;
+    color: white;
 }
