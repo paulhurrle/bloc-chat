@@ -1,17 +1,12 @@
 (function() {
-    function UserModalCtrl($uibModalInstance) {
-
-        this.blocChatCurrentUser = '';
-
-        this.setUser = function (user) {
-            currentUser = this.blocChatCurrentUser;
-            if (currentUser !== '') {
-                $uibModalInstance.close(user);
-            }
+    function UserModalCtrl($uibModalInstance, $cookies) {
+        this.setUser = function () {
+            $cookies.put("blocChatCurrentUser", this.input);
+            $uibModalInstance.close(this.input);
         };
     }
 
     angular
         .module('blocChat')
-        .controller('UserModalCtrl', ['$uibModalInstance', UserModalCtrl]);
+        .controller('UserModalCtrl', ['$uibModalInstance', '$cookies', UserModalCtrl]);
 })();
