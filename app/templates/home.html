@@ -18,7 +18,6 @@
     </div>
     <ul class="messages-list" ng-repeat="message in home.messages">
         {{ message.content }}
-        {{ message.username }}
-        {{ message.sentAt }}
+        <ul class="messages-list"><em>posted by {{ message.username }} at {{ message.sentAt }}</em></ul>
     </ul>
 </section>

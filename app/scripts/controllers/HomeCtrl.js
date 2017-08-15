@@ -7,6 +7,7 @@
 
         this.setActiveRoom = function (room) {
             this.activeRoom = room.$value;
+            this.messages = Message.getByRoomId(this.activeRoom);
         };
 
         this.open = function () {   //in your JSFiddle, you pass `size` and `template` as arguments here.
@@ -19,8 +20,6 @@
                 backdrop: 'static'
             });
         };
-
-        this.messages = Message.messagesByRoomId;
     }
 
     angular

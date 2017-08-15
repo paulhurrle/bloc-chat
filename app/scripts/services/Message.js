@@ -20,18 +20,12 @@
       var messages = $firebaseArray(ref);
 
       /**
-      * @desc Public variable stores data from Message.getByRoomId function
-      * @type {array}
-      */
-      Message.messagesByRoomId = '';
-
-      /**
       *@function Message.getByRoomId
       *@desc Public method gets messages from firebase database that have a given roomID property
       *@param {Object} roomId
       */
       Message.getByRoomId = function(roomId) {
-          Message.messagesByRoomId = messages.orderByChild("roomId").equalTo(roomId);
+          return $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
       };
 
       /**
