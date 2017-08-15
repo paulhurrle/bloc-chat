@@ -15,8 +15,8 @@
                                     //to bind to the view, but why `size`?
             $uibModal.open({
                 animation: true,
-                templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl as modal',
+                templateUrl: '/templates/new-room-modal.html',
+                controller: 'RoomModalCtrl as roomModal',
                 backdrop: 'static'
             });
         };
