@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #d104d9;
+    color: #000000;
 }
 
 .rooms-pane {
@@ -24,9 +24,10 @@ body {
     left: 350px;
     top: 0;
     right: 0;
-    background-color: rgb(198, 252, 198);
+    background-color: rgba(83, 208, 241, 0.53);
     padding: 10px 10px 10px 10px;
     float:left;
+    border-left: black solid 5px;
 }
 
 .main-title {
@@ -35,26 +36,25 @@ body {
     margin-bottom: 10px;
     float: left;
     text-align: center;
-    background-color: rgba(184, 31, 7, 0.53);
-    color: #abff00;
+    background-color: rgba(0, 104, 255, 0.27);
+    color: #5dd5f4;
     border-radius: 20px;
-    border: #aafc03 solid 5px;
+    border: rgb(0, 0, 0) solid 5px;
 }
 
 .title {
-    color: rgb(208, 17, 219);
+    color: rgb(0, 0, 0);
 }
 
 h3 {
     text-align: center;
-    text-decoration: underline;
     margin-bottom: 20px;
 }
 .new-room-button {
     margin-top: 20px;
     margin-left: 5px;
     font-size: 1.2rem;
-    color: #d500f9;
+    color: #000000;
     text-align: center;
     width: 125px;
     padding: 5px;
@@ -67,11 +67,11 @@ h3 {
 }
 
 .room-list-item {
-    color: rgb(173, 235, 220);
+    color: rgb(105, 235, 251);
 }
 
 .room-list-item:hover {
-    color: #FFEB3B;
+    color: #ffffff;
 }
 
 .input-button {
@@ -85,22 +85,22 @@ h3 {
 .modal-body {
     position: relative;
     padding: 15px;
-    background: rgb(30, 233, 203);
+    background: rgba(83, 208, 241, 0.53);
 }
 
 .modal-header {
     font-weight: 900;
-    background: rgba(63, 81, 181, 0.83);
-    color: rgb(30, 233, 203);
+    background: rgb(248, 129, 65);
+    color: rgb(180, 31, 7);
 }
 
 .button-nope {
-    background: rgba(169, 169, 169, 0.58);
-    color: #5f6ec1;
+    background: #f88141;
+    color: #ffffff;
 }
 
 .button-yep {
-    background: #5f6ec1;
+    background: #f88141;
     color: white;
 }
 
@@ -109,6 +109,7 @@ h3 {
     width: 100%;
     height: 100px;
     bottom: 0;
+    margin-bottom: 10px;
 }
 
 .new-message-textbox {
@@ -119,5 +120,6 @@ h3 {
 
 .button-send {
     height: inherit;
-    width: 10%;
+    width: 8%;
+    margin-right: 2%;
 }
