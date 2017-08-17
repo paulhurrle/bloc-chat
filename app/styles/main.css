@@ -80,3 +80,21 @@ body {
     background: dimgray;
     color: white;
 }
+
+.new-message {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+
+.new-message-textbox {
+    float: left;
+    height: inherit;
+    width: 90%;
+}
+
+.button-send {
+    height: inherit;
+    width: 10%;
+}

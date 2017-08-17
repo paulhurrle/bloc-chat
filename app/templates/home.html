@@ -20,6 +20,12 @@
     </div>
     <ul class="messages-list" ng-repeat="message in home.messages">
         {{ message.content }}
-        <ul class="messages-list"><em>posted by {{ message.username }} at {{ message.sentAt }}</em></ul>
+        <ul class="messages-list">
+            <em>{{ message.username }} @ {{ message.sentAt | date: 'shortTime' }} on {{ message.sentAt | date: 'mediumDate' }}</em>
+        </ul>
     </ul>
+    <div class="new-message">
+        <textarea class="new-message-textbox" placeholder="Enter message here" autofocus ng-model="home.newMessage"></textarea>
+        <button type="button" class="button-send" ng-click="home.sendMessage()">Send</button>
+    </div>
 </section>

@@ -27,7 +27,7 @@
 
       /**
       * @function Room.add
-      * @desc Public method that adds a room to Room objects
+      * @desc Public method that adds a room to firebase database
       * @param {Object} room
       */
       Room.add = function(room) {

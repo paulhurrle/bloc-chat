@@ -1,18 +1,32 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, Message) {
+    function HomeCtrl(Room, $uibModal, Message, $cookies) {
 
         this.rooms = Room.all;
 
         this.activeRoom = '';
+
+        this.newMessage = '';
 
         this.setActiveRoom = function (room) {
             this.activeRoom = room.$value;
             this.messages = Message.getByRoomId(this.activeRoom);
         };
 
-        this.open = function () {   //in your JSFiddle, you pass `size` and `template` as arguments here.
-                                    //I get that template refers to one potential location of the html you want
-                                    //to bind to the view, but why `size`?
+        this.sendMessage = function () {
+            if (this.newMessage === '') {
+                return;
+            }
+            var messageObj = {
+                username: $cookies.get('blocChatCurrentUser'),
+                content: this.newMessage,
+                sentAt: new Date().getTime(),
+                roomId: this.activeRoom
+            };
+            Message.send(messageObj);
+            this.newMessage = '';
+        }
+
+        this.open = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: '/templates/new-room-modal.html',
@@ -24,5 +38,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', '$cookies', HomeCtrl]);
 })();

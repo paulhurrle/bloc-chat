@@ -29,20 +29,14 @@
       };
 
       /**
-      * @function Message.add
-      * @desc Public method that adds a message to Message objects
-      * @param {Object} message
+      * @function Message.send
+      * @desc Public method that adds a message to firebase array
+      * @param {Object} newMessage
       */
-/*
-      Message.add = function(message) {
-         messages.$add({
-             username: "<USERNAME HERE>",
-             content: "<CONTENT OF THE MESSAGE HERE>",
-             sentAt: "<TIME MESSAGE WAS SENT HERE>",
-             roomId: "<ROOM UID HERE>"
-         });
+      Message.send = function(newMessage) {
+          messages.$add(newMessage);
       };
-*/
+
       return Message;
   }
 
