@@ -34,6 +34,10 @@
                 backdrop: 'static'
             });
         };
+
+        this.hoverIn = function() {
+            this.applyClass = "red";
+        };
     }
 
     angular

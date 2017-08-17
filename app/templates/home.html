@@ -8,7 +8,7 @@
         <button class="button-text" type="button" ng-click="home.open()">New room</button>
     </div>
     <ul class="room-list" ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)">
-        <li>{{ room.$value }}</li>
+        <li class="room-list-item" ng-mouseover="home.hoverIn()" ng-class="{{ home.applyClass }}">{{ room.$value }}</li>
     </ul>
 </section>
 
