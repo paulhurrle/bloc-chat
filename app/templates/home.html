@@ -7,9 +7,9 @@
     <div class="new-room-button">
         <button class="button-text" type="button" ng-click="home.open()">New room</button>
     </div>
-    <ul class="room-list" ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)">
-        <li class="room-list-item" ng-mouseover="home.hoverIn()" ng-class="{{ home.applyClass }}">{{ room.$value }}</li>
-    </ul>
+    <div class="room-list" ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)">
+        <div class="room-list-item">{{ room.$value }}</div>
+    </div>
 </section>
 
 <roomModal></roomModal>
@@ -18,12 +18,14 @@
     <div class="title">
         <h3>{{ home.activeRoom }}</h3>
     </div>
-    <ul class="messages-list" ng-repeat="message in home.messages">
-        {{ message.content }}
-        <ul class="messages-list">
-            <em>{{ message.username }} @ {{ message.sentAt | date: 'shortTime' }} on {{ message.sentAt | date: 'mediumDate' }}</em>
-        </ul>
-    </ul>
+    <div class="messages-list" ng-repeat="message in home.messages">
+        <div class="message-content">
+            <p>{{ message.content }}</p>
+        </div>
+        <div>
+            <p class="message-details"><em>{{ message.username }} @ {{ message.sentAt | date: 'shortTime' }} on {{ message.sentAt | date: 'mediumDate' }}</em></p>
+        </div>
+    </div>
     <div class="new-message">
         <textarea class="new-message-textbox" placeholder="Enter message here" autofocus ng-model="home.newMessage"></textarea>
         <button type="button" class="button-send" ng-click="home.sendMessage()">Send</button>

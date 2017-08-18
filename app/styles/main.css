@@ -5,7 +5,8 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #000000;
+    color: #1317eb;
+    background-color: rgba(144, 224, 255, 0.22);
 }
 
 .rooms-pane {
@@ -13,8 +14,7 @@ body {
     bottom: 0;
     top: 0;
     width: 350px;
-    background-image: url("images/background.jpg");
-    background-size: cover;
+    background: rgba(0, 115, 255, 0.39);
     padding: 10px 10px 10px 10px;
 }
 
@@ -24,26 +24,24 @@ body {
     left: 350px;
     top: 0;
     right: 0;
-    background-color: rgba(83, 208, 241, 0.53);
+    background-color: rgba(0, 59, 255, 0.04);
     padding: 10px 10px 10px 10px;
     float:left;
-    border-left: black solid 5px;
 }
 
 .main-title {
-    width: 200px;
-    height: 90px;
-    margin-bottom: 10px;
-    float: left;
+    width: 100%;
+    height: 100px;
+    padding-top: 8px;
     text-align: center;
-    background-color: rgba(0, 104, 255, 0.27);
-    color: #5dd5f4;
-    border-radius: 20px;
-    border: rgb(0, 0, 0) solid 5px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right,
+      red, blue);
+    border-radius: 25px;
 }
 
 .title {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 20, 20);
 }
 
 h3 {
@@ -51,14 +49,13 @@ h3 {
     margin-bottom: 20px;
 }
 .new-room-button {
-    margin-top: 20px;
-    margin-left: 5px;
+    margin-top: 10px;
+    margin-left: 200px;
     font-size: 1.2rem;
-    color: #000000;
+    color: #1514ff;
     text-align: center;
-    width: 125px;
+    width: 130px;
     padding: 5px;
-    float: left;
 }
 
 .room-list {
@@ -67,7 +64,10 @@ h3 {
 }
 
 .room-list-item {
-    color: rgb(105, 235, 251);
+    line-height: 40px;
+    text-indent: 30px;
+    color: rgb(21, 0, 232);
+    font-size: 20px;
 }
 
 .room-list-item:hover {
@@ -85,23 +85,28 @@ h3 {
 .modal-body {
     position: relative;
     padding: 15px;
-    background: rgba(83, 208, 241, 0.53);
+    background: rgba(0, 59, 255, 0.04);
 }
 
 .modal-header {
     font-weight: 900;
-    background: rgb(248, 129, 65);
-    color: rgb(180, 31, 7);
+    background: rgba(0, 115, 255, 0.39);
 }
 
 .button-nope {
-    background: #f88141;
-    color: #ffffff;
+    background: rgba(0, 115, 255, 0.39);
 }
 
 .button-yep {
-    background: #f88141;
-    color: white;
+    background: rgba(0, 115, 255, 0.39);
+}
+
+.message-content {
+    padding-left: 10px;
+}
+
+.message-details {
+    text-indent: 50px;
 }
 
 .new-message {
