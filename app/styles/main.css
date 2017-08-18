@@ -131,6 +131,6 @@ h3 {
 }
 
 .user-thumbnail {
-    max-width: 25px;
-    max-height: auto;
+    max-height: 30px;
+    max-width: auto;
 }
