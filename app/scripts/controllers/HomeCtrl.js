@@ -18,6 +18,7 @@
             }
             var messageObj = {
                 username: $cookies.get('blocChatCurrentUser'),
+                userUrl: "/styles/images/prof_pic.jpg",
                 content: this.newMessage,
                 sentAt: new Date().getTime(),
                 roomId: this.activeRoom

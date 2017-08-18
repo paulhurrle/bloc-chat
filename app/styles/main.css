@@ -107,6 +107,7 @@ h3 {
 
 .message-details {
     text-indent: 50px;
+    color: lightgrey;
 }
 
 .new-message {
@@ -127,4 +128,9 @@ h3 {
     height: inherit;
     width: 8%;
     margin-right: 2%;
+}
+
+.user-thumbnail {
+    max-width: 25px;
+    max-height: auto;
 }

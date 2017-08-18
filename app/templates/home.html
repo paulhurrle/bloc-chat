@@ -22,9 +22,9 @@
         <div class="message-content">
             <p>{{ message.content }}</p>
         </div>
-        <div>
-            <p class="message-details"><em>{{ message.username }} @ {{ message.sentAt | date: 'shortTime' }} on {{ message.sentAt | date: 'mediumDate' }}</em></p>
-        </div>
+        <span>
+            <p class="message-details"><img class="user-thumbnail" src="/styles/images/{{ message.username }}.jpg"/>&nbsp&nbsp<em>{{ message.username }} @ {{ message.sentAt | date: 'shortTime' }} on {{ message.sentAt | date: 'mediumDate' }}</em></p>
+        </span>
     </div>
     <div class="new-message">
         <textarea class="new-message-textbox" placeholder="Enter message here" autofocus ng-model="home.newMessage"></textarea>
