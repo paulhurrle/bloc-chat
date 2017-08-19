@@ -1,6 +1,6 @@
 <userModal></userModal>
 
-<section class="rooms-pane">
+<section class="rooms-pane" scroll-glue>
     <div class="main-title">
         <h1>Bloc Chat</h1>
     </div>
@@ -14,20 +14,27 @@
 
 <roomModal></roomModal>
 
-<section class="messages-pane">
+<section class="welcome" ng-show="!home.activeRoom">
+    <h2 class="welcome-message">Welcome to Bloc Chat!</h2>
+</section>
+
+<section class="messages-pane" ng-show="home.activeRoom" scroll-glue>
     <div class="title">
         <h3>{{ home.activeRoom }}</h3>
     </div>
     <div class="messages-list" ng-repeat="message in home.messages">
-        <div class="message-content">
-            <p>{{ message.content }}</p>
+        <div class="message-icon">
+            <img class="user-thumbnail" src="/styles/images/{{ message.username }}.jpg"/>
         </div>
-        <span>
-            <p class="message-details"><img class="user-thumbnail" src="/styles/images/{{ message.username }}.jpg"/>&nbsp&nbsp<em>{{ message.username }} @ {{ message.sentAt | date: 'shortTime' }} on {{ message.sentAt | date: 'mediumDate' }}</em></p>
-        </span>
+        <div class="message-body">
+            <p class="message-details"><b>{{ message.username }}</b><em>-{{ message.sentAt | date:"MM/dd/yyyy 'at' h:mma" }}</em></p>
+            <p class="message-content">{{ message.content }}</p>
+
+        </div>
     </div>
     <div class="new-message">
-        <textarea class="new-message-textbox" placeholder="Enter message here" autofocus ng-model="home.newMessage"></textarea>
-        <button type="button" class="button-send" ng-click="home.sendMessage()">Send</button>
+        <textarea class="new-message-textbox" placeholder="Enter message here" ng-model="home.newMessage"
+            ng-keypress="($event.charCode==13)? home.sendMessageEnter() : return"></textarea>
+        <button type="button" class="button-send" ng-click="home.sendMessageClick()">Send</button>
     </div>
 </section>

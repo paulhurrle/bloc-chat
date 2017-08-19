@@ -12,19 +12,36 @@
             this.messages = Message.getByRoomId(this.activeRoom);
         };
 
-        this.sendMessage = function () {
+        this.sendMessageEnter = function () {
             if (this.newMessage === '') {
                 return;
             }
             var messageObj = {
                 username: $cookies.get('blocChatCurrentUser'),
-                userUrl: "/styles/images/prof_pic.jpg",
+                userUrl: "/styles/images/{{ message.username }}.jpg",
                 content: this.newMessage,
                 sentAt: new Date().getTime(),
                 roomId: this.activeRoom
             };
             Message.send(messageObj);
             this.newMessage = '';
+            return;
+        }
+
+        this.sendMessageClick = function () {
+            if (this.newMessage === '') {
+                return;
+            }
+            var messageObj = {
+                username: $cookies.get('blocChatCurrentUser'),
+                userUrl: "/styles/images/{{ message.username }}.jpg",
+                content: this.newMessage,
+                sentAt: new Date().getTime(),
+                roomId: this.activeRoom
+            };
+            Message.send(messageObj);
+            this.newMessage = '';
+            return;
         }
 
         this.open = function () {
@@ -34,10 +51,6 @@
                 controller: 'RoomModalCtrl as roomModal',
                 backdrop: 'static'
             });
-        };
-
-        this.hoverIn = function() {
-            this.applyClass = "red";
         };
     }
 
