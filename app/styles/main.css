@@ -11,8 +11,8 @@ body {
 
 .rooms-pane {
     position: fixed;
-    bottom: 0;
     top: 0;
+    bottom: 0;
     width: 270px;
     background: rgba(0, 115, 255, 0.39);
     padding: 10px 10px 10px 10px;
@@ -88,6 +88,7 @@ h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-indent: 5px;
 }
 
 .room-list-item:hover {
@@ -164,4 +165,14 @@ h3 {
 .user-thumbnail {
     max-height: auto;
     max-width: 40px;
+}
+
+.rooms-pane [scroll-glue]{
+    height: 540px;
+    overflow-y: scroll;
+}
+
+.messages-pane [scroll-glue]{
+    height: 470px;
+    overflow-y: scroll;
 }

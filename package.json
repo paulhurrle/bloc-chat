@@ -21,7 +21,6 @@
     "node": ">=6.11.1"
   },
   "devDependencies": {
-    "angularjs-scroll-glue": "^2.2.0",
     "connect-modrewrite": "^0.7.9",
     "es5-shim": "^4.0.1"
   }

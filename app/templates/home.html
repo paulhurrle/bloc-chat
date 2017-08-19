@@ -1,14 +1,16 @@
 <userModal></userModal>
 
-<section class="rooms-pane" scroll-glue>
+<section class="rooms-pane">
     <div class="main-title">
         <h1>Bloc Chat</h1>
     </div>
     <div class="new-room-button">
         <button class="button-text" type="button" ng-click="home.open()">New room</button>
     </div>
-    <div class="room-list" ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)">
-        <div class="room-list-item">{{ room.$value }}</div>
+    <div class="rooms-main" scroll-glue>
+        <div class="room-list" ng-repeat="room in home.rooms" ng-click="home.setActiveRoom(room)">
+            <div class="room-list-item">{{ room.$value }}</div>
+        </div>
     </div>
 </section>
 
@@ -18,18 +20,22 @@
     <h2 class="welcome-message">Welcome to Bloc Chat!</h2>
 </section>
 
-<section class="messages-pane" ng-show="home.activeRoom" scroll-glue>
-    <div class="title">
-        <h3>{{ home.activeRoom }}</h3>
-    </div>
-    <div class="messages-list" ng-repeat="message in home.messages">
-        <div class="message-icon">
-            <img class="user-thumbnail" src="/styles/images/{{ message.username }}.jpg"/>
+<section class="messages-pane">
+    <div class="messages-header" ng-show="home.activeRoom">
+        <div class="title">
+            <h3>{{ home.activeRoom }}</h3>
         </div>
-        <div class="message-body">
-            <p class="message-details"><b>{{ message.username }}</b><em>-{{ message.sentAt | date:"MM/dd/yyyy 'at' h:mma" }}</em></p>
-            <p class="message-content">{{ message.content }}</p>
+    </div>
+    <div class="messages-main" scroll-glue>
+        <div class="messages-list" ng-repeat="message in home.messages">
+            <div class="message-icon">
+                <img class="user-thumbnail" src="/styles/images/{{ message.username }}.jpg"/>
+            </div>
+            <div class="message-body">
+                <p class="message-details"><b>{{ message.username }}</b><em>-{{ message.sentAt | date:"MM/dd/yyyy 'at' h:mma" }}</em></p>
+                <p class="message-content">{{ message.content }}</p>
 
+            </div>
         </div>
     </div>
     <div class="new-message">
