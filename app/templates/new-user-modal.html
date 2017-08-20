@@ -1,13 +1,12 @@
 <section class="modal-window">
     <div class="modal-header">
         <h3 class="modal-title">Set a username</h3>
-        <p>This name will appear when you send messages</p>
     </div>
 
     <div class="modal-body">
         <form ng-submit="userModal.setUser()">
             <div class="input-group">
-                <input type="text" placeholder="Enter username" autofocus ng-model="userModal.input" />
+                <input style="width: 100%;" type="text" placeholder="Enter username" autofocus ng-model="userModal.input" />
                 <div class="input-button">
                     <span>
                         <button class="button-yep" type="button" ng-click="userModal.setUser()">Set username</button>

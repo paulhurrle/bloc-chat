@@ -29,18 +29,20 @@
     <div class="messages-main" scroll-glue>
         <div class="messages-list" ng-repeat="message in home.messages">
             <div class="message-icon">
-                <img class="user-thumbnail" src="/styles/images/{{ message.username }}.jpg"/>
+                <img class="user-thumbnail" src="/styles/images/Anonymous.jpg"/>
             </div>
             <div class="message-body">
-                <p class="message-details"><b>{{ message.username }}</b><em>-{{ message.sentAt | date:"MM/dd/yyyy 'at' h:mma" }}</em></p>
+                <p class="message-details">
+                    <span style="font-size: 1rem; color: black;"><b>{{ message.username }}</b></span>
+                    <span style="font-size: .8rem; color: gray;"><em> - {{ message.sentAt | date:"MM/dd/yyyy 'at' h:mma" }}</em></span>
+                </p>
                 <p class="message-content">{{ message.content }}</p>
-
             </div>
         </div>
     </div>
-    <div class="new-message">
+    <div class="new-message" ng-show="home.activeRoom">
         <textarea class="new-message-textbox" placeholder="Enter message here" ng-model="home.newMessage"
-            ng-keypress="($event.charCode==13)? home.sendMessageEnter() : return"></textarea>
-        <button type="button" class="button-send" ng-click="home.sendMessageClick()">Send</button>
+            ng-keypress="($event.charCode==13)? home.sendMessage($event) : return"></textarea>
+        <button type="button" class="button-send" ng-click="home.sendMessage($event)">Send</button>
     </div>
 </section>

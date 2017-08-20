@@ -68,7 +68,7 @@ h3 {
 
 .welcome {
     width: 30%;
-    margin: 300px 0 0 500px;
+    margin: 300px 0 0 600px;
 }
 
 .welcome-message {
@@ -138,8 +138,7 @@ h3 {
 }
 
 .message-details {
-    color: black;
-    height: 10px;
+    height: 15px;
 }
 
 .new-message {
