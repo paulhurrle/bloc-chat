@@ -13,7 +13,7 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 270px;
+    width: 220px;
     background: rgba(0, 115, 255, 0.39);
     padding: 10px 10px 10px 10px;
 }
@@ -21,7 +21,7 @@ body {
 .messages-pane {
     position: fixed;
     bottom: 0;
-    left: 270px;
+    left: 220px;
     top: 0;
     right: 0;
     background-color: rgba(0, 59, 255, 0.04);
@@ -30,12 +30,11 @@ body {
 }
 
 .main-title {
-    width: 200px;
+    width: 150px;
     height: 60px;
     text-align: center;
     color: rgb(255, 255, 255);
-    background: linear-gradient(to right,
-      red, blue);
+    background: linear-gradient(to right,       rgba(255, 0, 0, 0.59), rgba(0, 0, 255, 0.55));
     margin-left: 25px;
     border-radius: 25px;
 }
@@ -58,7 +57,7 @@ h3 {
     margin-bottom: 20px;
 }
 .new-room-button {
-    margin: 10px 0 10px 60px;
+    margin: 10px 0 10px 36px;
     font-size: 1rem;
     color: #1514ff;
     text-align: center;
@@ -68,11 +67,12 @@ h3 {
 
 .welcome {
     width: 30%;
-    margin: 300px 0 0 600px;
+    margin: 200px 0 0 500px;
 }
 
 .welcome-message {
-    font-size: 2.5rem;
+    font-size: 10rem;
+    color: rgba(0, 0, 255, 0.05);
 }
 
 .room-list {
@@ -168,10 +168,10 @@ h3 {
 
 .rooms-pane [scroll-glue]{
     height: 540px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .messages-pane [scroll-glue]{
     height: 470px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
