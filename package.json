@@ -4,7 +4,7 @@
   "description": "chat room",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulhurrle/prattle.github.io.git"
+    "url": "https://paulhurrle.github.io/prattle.github.io/"
   },
   "main": "server.js",
   "scripts": {
