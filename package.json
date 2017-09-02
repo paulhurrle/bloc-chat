@@ -1,10 +1,10 @@
 {
-  "name": "bloc-frontend-project-starter",
+  "name": "Prattle",
   "version": "0.0.4",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "description": "chat room",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://paulhurrle.github.io/prattle.github.io/"
   },
   "main": "server.js",
   "scripts": {
