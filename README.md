@@ -1,4 +1,4 @@
-<img src="/app/styles/images/blocchat1.png" alt="Prattle")
+<img src="/app/styles/images/blocchat1.png" alt="Prattle">
 
 ## Explanation
 
@@ -39,7 +39,7 @@ function RoomModalCtrl(Room, $uibModalInstance) {
         .controller('RoomModalCtrl', ['Room', '$uibModalInstance', RoomModalCtrl]);
 }
 ```
-<img src="/app/styles/images/blocchatroom.png" alt="Prattle Room")
+<img src="/app/styles/images/blocchatroom.png" alt="Prattle Room">
 
 Next I added logic to identify the active room and created message objects in the Firebase database to include this property. I added a message factory and controller in a similar fashion to those created for displaying and creating rooms. Next I included the Angular cookies module to enable tracking usernames, another property included within each message object. A run block was added to prompt new users to provide this information using similar modal logic as before. Then methods were added to execute when a user creates a new message, associating specific user and time properties with each message.
 
@@ -59,7 +59,7 @@ this.sendMessage = function () {
 }
 ```
 
-<img src="app/styles/images/blocchatuser.png" alt="Prattle User")
+<img src="app/styles/images/blocchatuser.png" alt="Prattle User">
 
 The final step was styling and incorporating a few UI features including the option to submit messages on click or keypress and integrating user thumbnails.
 
