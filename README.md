@@ -1,4 +1,4 @@
-<img src="app/styles/images/blocchat1.png alt="Prattle")
+<img src="/app/styles/images/blocchat1.png" alt="Prattle")
 
 ## Explanation
 
@@ -12,18 +12,18 @@ Starting with not much more than a few wiremaps and a set of project requirement
 
 After choosing a rough design concept for the project and initializing a Firebase database, I created a factory to store all AngularFire APIs needed to query the database to display a room or to add one, and a controller to manage requests to and from the view. A main html template was then created to organize the content to inject into the view when requested. I associated the main controller with the main html template using a state provider which ensured all properties and methods within the controller's scope were available to that state:
 
-{% highlight javascript %}
+```
 $stateProvider
     .state('home', {
         url: '/',
         controller: 'HomeCtrl as home',
         templateUrl: '/templates/home.html'
         });
-{% endhighlight %}
+```
 
 I added a modal using the UI Bootstrap $uimodal service to allow users to add new rooms, which involved creating an additional template and controller for adding new room objects to the Firebase database.
 
-{% highlight javascript %}
+```
 function RoomModalCtrl(Room, $uibModalInstance) {
         this.input = '';
         this.cancel = function () {
@@ -38,12 +38,12 @@ function RoomModalCtrl(Room, $uibModalInstance) {
         .module('blocChat')
         .controller('RoomModalCtrl', ['Room', '$uibModalInstance', RoomModalCtrl]);
 }
-{% endhighlight %}
-<img src="app/styles/images/blocchatroom.png alt="Prattle Room")
+```
+<img src="/app/styles/images/blocchatroom.png" alt="Prattle Room")
 
 Next I added logic to identify the active room and created message objects in the Firebase database to include this property. I added a message factory and controller in a similar fashion to those created for displaying and creating rooms. Next I included the Angular cookies module to enable tracking usernames, another property included within each message object. A run block was added to prompt new users to provide this information using similar modal logic as before. Then methods were added to execute when a user creates a new message, associating specific user and time properties with each message.
 
-{% highlight javascript %}
+```
 this.sendMessage = function () {
     if (this.newMessage === '') {
         return;
@@ -57,9 +57,9 @@ this.sendMessage = function () {
     Message.send(messageObj);
     this.newMessage = '';
 }
-{% endhighlight %}
+```
 
-<img src="app/styles/images/blocchatuser.png alt="Prattle User")
+<img src="app/styles/images/blocchatuser.png" alt="Prattle User")
 
 The final step was styling and incorporating a few UI features including the option to submit messages on click or keypress and integrating user thumbnails.
 
